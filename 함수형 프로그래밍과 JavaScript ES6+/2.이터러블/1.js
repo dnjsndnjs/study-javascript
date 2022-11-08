@@ -56,12 +56,12 @@ for (const a of map.entries()) log(a);
 - 이터레이터: { value, done } 객체를 리턴하는 next() 를 가진 값
 - 이터러블/이터레이터 프로토콜: 이터러블을 for...of, 전개 연산자 등과 함께 동작하도록한 규약
 
-- 이터레이터의 [Symbol.iterator]()는 자기 자신을 리턴함
+- well-formed iterator의 [Symbol.iterator]()는 자기 자신을 리턴함
 
 ### 사용자 정의 이터러블을 통해 알아보기
 */
 
-log('---------------')
+log('---------------');
 const iterable = {
     [Symbol.iterator]() {
         let i = 3;
